@@ -1,18 +1,16 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser';
+import {FullCalendarModule} from '@fullcalendar/angular'; // must go before plugins
+import {AppComponent} from './app.component';
+import {ButtonComponent} from './shared/button/button.component';
+import {ModalComponent} from './shared/modal/modal.component';
+import {TableComponent} from './shared/table/table.component';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, FormsModule,FullCalendarModule],
+  declarations: [AppComponent, ButtonComponent, ModalComponent,TableComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
